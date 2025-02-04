@@ -5,6 +5,7 @@ import WhyChooseUs from "../../Components/WhyChooseUs/WhyChooseUs";
 import CompanyDetails from "../../Components/CompanyDetails/CompanyDetails";
 import WorkWithUs from "../../Components/WorkWithUs/WorkWithUs";
 import Popup from "../../Components/Popup/Popup";
+import AddCollection from "../../Components/AddCollection/AddCollection";
 
 
 const Home = () => {
@@ -135,6 +136,8 @@ const Home = () => {
       <WorkWithUs />
 
       <WhyChooseUs />
+
+      <AddCollection />
     </>
   );
 };

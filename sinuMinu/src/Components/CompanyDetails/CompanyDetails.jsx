@@ -1,5 +1,7 @@
 import React from 'react'
 import Logo from '../../assets/Logo.jpg'
+import CompanyVideo from '../../assets/video2.mp4'
+import First from '../../assets/55.jpg'
 const CompanyDetails = () => {
   return (
     <section className="h-auto z-20 w-auto p-12 border-amber-200 border-t-2 max-w-full ">
@@ -25,18 +27,30 @@ const CompanyDetails = () => {
                   <div className="flex items-center space-x-6 lg:space-x-8">
                     <div className="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                        <img
+                        {/* <img
                           alt=""
                           src={Logo}
                           className="size-full object-cover border-2 border-amber-400"
-                        />
+                        /> */}
+                        <video 
+                       
+                        className="w-full max-w-3xl rounded-xl shadow-lg"
+                        controls
+                        autoPlay
+                        muted
+                        loop
+                        >
+                         <source src={CompanyVideo} type="video/mp4" />
+
+                        </video>
                       </div>
-                      <div className="h-64 w-44 overflow-hidden rounded-lg">
+                      <div className="h-64 w-44 overflow-hidden items-center rounded-lg ">
                         <img
-                          alt=""
-                          src={Logo}
-                          className="size-full object-cover border-2 border-amber-400"
+                          alt="Centered Image"
+                          src={First}
+                          className="size-full  object-cover border-2 border-amber-400"
                         />
+                        
                       </div>
                     </div>
                     <div className="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
@@ -48,11 +62,22 @@ const CompanyDetails = () => {
                         />
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
+                        {/* <img
                           alt=""
                          src={Logo}
                           className="size-full object-cover border-2 border-amber-400"
-                        />
+                        /> */}
+                        <video 
+                       
+                       className="w-full max-w-3xl rounded-xl shadow-lg"
+                       controls
+                       autoPlay
+                       muted
+                       loop
+                       >
+                        <source src={CompanyVideo} type="video/mp4" />
+
+                       </video>
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img
@@ -64,11 +89,23 @@ const CompanyDetails = () => {
                     </div>
                     <div className="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
+                        {/* <img
                           alt=""
                           src={Logo}
                           className="size-full object-cover border-2 border-amber-400"
-                        />
+                        /> */}
+
+<video 
+                       
+                       className="w-full max-w-3xl rounded-xl shadow-lg"
+                       controls
+                       autoPlay
+                       muted
+                       loop
+                       >
+                        <source src={CompanyVideo} type="video/mp4" />
+
+                       </video>
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img

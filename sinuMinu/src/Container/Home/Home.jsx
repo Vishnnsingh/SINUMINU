@@ -6,6 +6,7 @@ import CompanyDetails from "../../Components/CompanyDetails/CompanyDetails";
 import WorkWithUs from "../../Components/WorkWithUs/WorkWithUs";
 import Popup from "../../Components/Popup/Popup";
 import AddCollection from "../../Components/AddCollection/AddCollection";
+import Video1 from "../../assets/video2.mp4"
 
 
 const Home = () => {
@@ -80,6 +81,7 @@ const Home = () => {
             width="800"
             height="500"
             src="https://www.youtube.com/embed/ueUG-mTjmXs?enablejsapi=1&mute=1"
+              // src={Video1}
             title="YouTube video player"
             // frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -132,12 +134,13 @@ const Home = () => {
       </section>
 
       <CompanyDetails />
+      <AddCollection />
 
       <WorkWithUs />
 
       <WhyChooseUs />
 
-      <AddCollection />
+      
     </>
   );
 };

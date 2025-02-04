@@ -74,7 +74,7 @@ const Contact = () => {
         ></iframe>
         <h1 className='text-center mt-9'>Address</h1>
         <p className="text-center text-gray-600 mt-2">
-          123 Company Street, Tech City, Innovation State, 45678
+        C/o Gita Devi, Bhatawali Road, Near Post Office, Nawanagar, Buxar, Dumraon, Bihar, India, 802129.
         </p>
       </div>
     </div>
@@ -82,3 +82,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+

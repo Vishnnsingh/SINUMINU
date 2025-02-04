@@ -2,6 +2,7 @@ import React from 'react'
 import BlogSection from '../../Components/BlogSection/BlogSection'
 import Vishal from "../../assets/Vishal.jpg"
 import Logo from "../../assets/Logo.jpg"
+// import Photorapers from '../../Components/Photoraper/Photorapers';
 
 
 export const blogs = [
@@ -39,7 +40,13 @@ export const blogs = [
 const Work = () => {
 
   return (
-    <BlogSection blogs={blogs} />
+     <>
+      <BlogSection blogs={blogs} />
+     </>
+
+   
+
+    
   )
 }
 

@@ -57,8 +57,8 @@ const Footer = () => {
 
         {/* Contact Information */}
         <div className="space-y-2 text-center md:text-left">
-          <p>Call Us: <a href="tel:+1234567890" className="hover:text-amber-400">+1 234 567 890</a></p>
-          <p>Email: <a href="mailto:contact@company.com" className="hover:text-amber-400">contact@company.com</a></p>
+          <p>Call Us: <a href="tel:+1234567890" className="hover:text-amber-400">+91 7004823410</a></p>
+          <p>Email: <a href="mailto:contact@company.com" className="hover:text-amber-400">contact@sinuminuanimation.com</a></p>
           <Link to="#" className="hover:text-amber-400 block">Terms & Conditions</Link>
           <Link to="#" className="hover:text-amber-400 block">Privacy Policy</Link>
         </div>

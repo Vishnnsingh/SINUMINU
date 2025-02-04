@@ -1,18 +1,17 @@
 import React from "react";
-
+import Styles from "./WhyChooseUs.module.css";
 const WhyChooseUs = () => {
   return (
     <>
-      <section className="overflow-hidden p-20 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
+      <section className="overflow-hidden p-20 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark ">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
-            <div className="w-full px-4 lg:w-6/12">
-            
+            <div className="w-full px-4 lg:w-6/12 ">
               <div className="flex items-center -mx-3 sm:-mx-4">
-
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="py-3 sm:py-4">
                     <img
+                      id={Styles.imgh}
                       src="https://i.ibb.co/gFb3ns6/image-1.jpg"
                       alt=""
                       className="w-full rounded-2xl"
@@ -20,6 +19,7 @@ const WhyChooseUs = () => {
                   </div>
                   <div className="py-3 sm:py-4">
                     <img
+                      id={Styles.imgh}
                       src="https://i.ibb.co/rfHFq15/image-2.jpg"
                       alt=""
                       className="w-full rounded-2xl"
@@ -30,6 +30,7 @@ const WhyChooseUs = () => {
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="relative z-10 my-4">
                     <img
+                      id={Styles.imgh}
                       src="https://i.ibb.co/9y7nYCD/image-3.jpg"
                       alt=""
                       className="w-full rounded-2xl"
@@ -606,11 +607,10 @@ const WhyChooseUs = () => {
                     </span>
                   </div>
                 </div>
-
               </div>
             </div>
 
-            <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
+            <div className="w-full px-4 lg:w-1/2 xl:w-5/12 border-r-8 border-r-blue-600">
               <div className="mt-10 lg:mt-0">
                 <span className="block mb-4 text-lg font-semibold text-primary">
                   Why Choose Us

@@ -26,14 +26,14 @@ const Header = () => {
   }, [location.pathname]);
 
   return (
-    <Disclosure as="nav" className="bg-[rgb(35,36,69)] pt-2 h-20 sticky left-0 right-0 top-0 z-50 ">
+    <Disclosure as="nav"  className="bg-[rgb(35,36,69)] pt-2 pb-3 sticky left-0 right-0 top-0 z-50 ">
          {/* <div className='bg-red-500'><h1>hello</h1></div> */}
-      <div className="mx-auto max-w-7xl px-2 sm:px-6   lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0  flex items-center sm:hidden">
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-amber-400 hover:bg-amber-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
+      <div  className="mx-auto max-w-7xl px-2 sm:px-6   lg:px-8">
+        <div  className="relative flex h-16 items-center justify-between">
+          <div  className="absolute inset-y-0 left-0   flex items-center sm:hidden">
+            <DisclosureButton  className="group relative inline-flex items-center justify-center  rounded-md p-2 text-amber-400 hover:bg-amber-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
               <Bars3Icon aria-hidden="true" className="block size-6 group-data-open:hidden" />
-              <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-open:block" />
+              <XMarkIcon aria-hidden="true" className="hidden  size-6 group-data-open:block" />
             </DisclosureButton>
           </div>
           <div className="flex flex-1 gap-[26rem] items-center justify-center sm:items-stretch sm:justify-start">
@@ -45,16 +45,19 @@ const Header = () => {
               />
             </div>
             
-            <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4">
+            <div className="hidden sm:ml-6 sm:block" >
+
+              <div className="flex space-x-4 ">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     to={item.to}
                     className={classNames(
-                      activePath === item.to ? 'bg-amber-500 text-white' : 'text-white hover:bg-gray-500 hover:text-white',
+                      activePath === item.to ? 'bg-amber-500 text-white ' : 'text-white hover:bg-black-500 hover:text-white ',
                       'rounded-md px-3 py-2 text-xl font-medium'
                     )}
+
+                    
                   >
                     {item.name}
                   </Link>
@@ -115,8 +118,8 @@ const Header = () => {
               as={Link}
               to={item.to}
               className={classNames(
-                activePath === item.to ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium'
+                activePath === item.to ? 'bg-amber-500 text-white ' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                'block rounded-md px-3 py-2 text-base font-medium '
               )}
             >
               {item.name}
@@ -129,5 +132,3 @@ const Header = () => {
 };
 
 export default Header;
-
-

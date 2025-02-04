@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of images */
+    gap: 15px;
+    margin: 20px;
+    position: relative;
+  }
+  
+  .imageContainer {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    position: relative;
+    cursor: move;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, top 0.3s ease; /* Add top transition for smooth movement */
+  }
+  
+  .none {
+    opacity: 0; /* Hide image while dragging */
+  }
+  
+  .ballBounce {
+    animation: bounce 0.5s ease-in-out;
+  }
+  
+  .hidden {
+    visibility: hidden; /* Hide image while hovering over another image */
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  

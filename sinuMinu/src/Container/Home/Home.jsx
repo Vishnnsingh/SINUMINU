@@ -7,6 +7,7 @@ import WorkWithUs from "../../Components/WorkWithUs/WorkWithUs";
 import Popup from "../../Components/Popup/Popup";
 import AddCollection from "../../Components/AddCollection/AddCollection";
 import Video1 from "../../assets/video2.mp4"
+import DragAndDrop from "../../Components/DragAndDrop/DragAndDrop";
 
 
 const Home = () => {
@@ -131,15 +132,18 @@ const Home = () => {
             onClick={() => handleClick("iframe2")}
           ></iframe>
         </div>
-      </section>
 
+        
+      </section>
+      <DragAndDrop />
       <CompanyDetails />
       <AddCollection />
 
       <WorkWithUs />
 
       <WhyChooseUs />
-
+      <DragAndDrop />
+     
       
     </>
   );

@@ -15,7 +15,7 @@ const WorkWithUs = () => {
     
     
     
-    className="h-auto z-20 w-auto p-12 border-amber-200 border-t-2 max-w-full ">
+    className="h-auto z-20 w-auto p-12  max-w-full ">
       <div 
       
       

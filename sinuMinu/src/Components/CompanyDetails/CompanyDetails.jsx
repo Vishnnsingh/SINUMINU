@@ -4,7 +4,7 @@ import CompanyVideo from '../../assets/video2.mp4'
 import First from '../../assets/55.jpg'
 const CompanyDetails = () => {
   return (
-    <section className="h-auto z-20 w-auto p-12 border-amber-200 border-t-2 max-w-full ">
+    <section className="h-auto z-20 w-auto p-12  max-w-full ">
     <div className="relative overflow-hidden bg-white">
       <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">

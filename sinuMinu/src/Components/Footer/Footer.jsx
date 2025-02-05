@@ -13,7 +13,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-8 px-4 md:px-20">
+    <footer className="bg-gray-900 text-white py-8 px-4 relative md:px-20">
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
         {/* Company Logo */}
         <div className="mb-4 md:mb-0">

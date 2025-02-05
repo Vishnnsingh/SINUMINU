@@ -26,7 +26,7 @@ const Header = () => {
   }, [location.pathname]);
 
   return (
-    <Disclosure as="nav"  className="bg-[rgb(35,36,69)] pt-2 pb-3 sticky left-0 right-0 top-0 z-50 ">
+    <Disclosure as="nav"  className="  rounded-bl-[20px] rounded-tr-[20px]  bg-[rgb(35,36,69)] pt-2 pb-3 sticky left-0 right-0 top-0 z-50 ">
          {/* <div className='bg-red-500'><h1>hello</h1></div> */}
       <div  className="mx-auto max-w-7xl px-2 sm:px-6   lg:px-8">
         <div  className="relative flex h-16 items-center justify-between">

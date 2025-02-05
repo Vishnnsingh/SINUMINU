@@ -9,7 +9,7 @@ const WhyChooseUs = () => {
             <div className="w-full px-4 lg:w-6/12 ">
               <div className="flex items-center -mx-3 sm:-mx-4">
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
-                  <div className="py-3 sm:py-4">
+                  <div className="py-3 relative sm:py-4">
                     <img
                       id={Styles.imgh}
                       src="https://i.ibb.co/gFb3ns6/image-1.jpg"
@@ -17,7 +17,7 @@ const WhyChooseUs = () => {
                       className="w-full rounded-2xl"
                     />
                   </div>
-                  <div className="py-3 sm:py-4">
+                  <div className="py-3  relative sm:py-4">
                     <img
                       id={Styles.imgh}
                       src="https://i.ibb.co/rfHFq15/image-2.jpg"
@@ -611,8 +611,8 @@ const WhyChooseUs = () => {
             </div>
 
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12 border-r-8 border-r-blue-600">
-              <div className="mt-10 lg:mt-0">
-                <span className="block mb-4 text-lg font-semibold text-primary">
+              <div className="mt-10  relative lg:mt-0">
+                <span className="block mb-4 text-lg  font-semibold text-primary">
                   Why Choose Us
                 </span>
                 <h2 className="mb-5 text-3xl font-bold text-dark dark:text-amber-500 sm:text-[40px]/[48px]">

@@ -5,6 +5,10 @@
     margin: 20px;
     position: relative;
   }
+
+  /* .container:hover {
+    animation: backInLeft 1s ease-in-out 1s forwards; /* Add the animation here */
+  /* } */ 
   
   .imageContainer {
     width: 150px;

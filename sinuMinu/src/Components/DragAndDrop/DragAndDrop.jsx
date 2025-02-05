@@ -4,6 +4,8 @@ import IMg1 from "../../assets/1.png";
 import IMg2 from "../../assets/2.png";
 import IMg3 from "../../assets/3.png";
 import IMg4 from "../../assets/22.png";
+import 'animate.css';
+
 
 const DragAndDrop = () => {
   const [images, setImages] = useState([
@@ -91,7 +93,7 @@ const DragAndDrop = () => {
               : 'none',
           }}
         >
-          <img src={image.src} alt={`Image ${image.id}`} />
+          <img   src={image.src} alt={`Image ${image.id}`} />
         </div>
       ))}
     </div>

@@ -1,7 +1,11 @@
-// // CreativeAnimation.jsx
+
+
 // import { useEffect } from 'react';
 // import styles from './CreativeAnimation.module.css';
 // import TagCanvas from 'tag-canvas';
+// import Logo from "../../assets/1.png"
+// import Lo from "../../assets/22.png"
+// import Logo2 from "../../assets/2.png"
 
 // const CreativeAnimation = () => {
 //   useEffect(() => {
@@ -34,33 +38,38 @@
 //     });
 //   };
 
+//   const handleClick = (e) => {
+//     e.preventDefault();  // Prevent the default anchor behavior (no page reload)
+//     // You can add additional logic here if needed
+//   };
+
 //   const tags = [
-//     { name: "Copyright", weight: 20 },
-//     { name: "Trademark", weight: 13 },
-//     { name: "Patent", weight: 43 },
-//     { name: "Tort", weight: 20 },
-//     { name: "Antitrust", weight: 23 },
-//     { name: "Bankruptcy", weight: 23 },
-//     { name: "Copyright", weight: 20 },
-//     { name: "Trademark", weight: 13 },
-//     { name: "Patent", weight: 43 },
-//     { name: "Tort", weight: 20 },
-//     { name: "Antitrust", weight: 23 },
-//     { name: "Bankruptcy", weight: 23 },
-//     { name: "Copyright", weight: 20 },
-//     { name: "Trademark", weight: 13 },
-//     { name: "Patent", weight: 43 },
-//     { name: "Tort", weight: 20 },
-//     { name: "Antitrust", weight: 23 },
-//     { name: "Bankruptcy", weight: 23 }
+//     { name: "Copyright", weight: 20, imageSrc: Lo },
+//     { name: "Trademark", weight: 13 , imageSrc: Logo2},
+//     { name: "Patent", weight: 43 , imageSrc: Logo},
+//     { name: "Tort", weight: 20 , imageSrc: Logo},
+//     { name: "Antitrust", weight: 23 , imageSrc: Logo},
+//     { name: "Bankruptcy", weight: 23 , imageSrc: Logo},
+//     { name: "Copyright", weight: 20 , imageSrc: Logo},
+//     { name: "Trademark", weight: 13 , imageSrc: Logo2},
+//     // { name: "Patent", weight: 43 , imageSrc: Logo},
+//     // { name: "Tort", weight: 20 , imageSrc: Logo},
+//     // { name: "Antitrust", weight: 23 , imageSrc: Logo},
+//     // { name: "Bankruptcy", weight: 23 , imageSrc: Logo2},
+//     // { name: "Copyright", weight: 20 , imageSrc: Logo},
+//     // { name: "Trademark", weight: 13 , imageSrc: Lo},
+//     // { name: "Patent", weight: 43 , imageSrc: Logo2},
+//     // { name: "Tort", weight: 20 , imageSrc: Logo},
+//     // { name: "Antitrust", weight: 23 , imageSrc: Logo},
+//     // { name: "Bankruptcy", weight: 23 , imageSrc: Logo}
 //   ];
 
 //   return (
 //     <div className={styles.canvasContainer}>
-//       <div>
+//       <div >
 //         <canvas
 //           id="resCanvas"
-//           width="2000"
+//           width="3500"
 //           height="600"
 //           className={styles.fadeIn}
 //         ></canvas>
@@ -68,9 +77,18 @@
 
 //       <ul id="demoTags">
 //         {tags.map((tag, index) => (
-//           <li key={index}>
-//             <a  data-weight={tag.weight}>
-//               {tag.name}
+//           <li key={index} style={{width:"5px", height: "5px"}}>
+//             <a 
+//               href="#!" 
+//               data-weight={tag.weight}
+//               onClick={handleClick} // Add the click handler
+//             >
+//                 <img 
+//                 src={tag.imageSrc} 
+//                 // alt={tag.name} 
+//                 style={{ width: "5px", height: "5px", marginRight: "10px" }} // Optional styling
+//               />
+//               {/* {tag.name} */}
 //             </a>
 //           </li>
 //         ))}
@@ -81,18 +99,7 @@
 
 // export default CreativeAnimation;
 
-
-
-
-// CreativeAnimation.jsx
-
-
-
-
-// CreativeAnimation.jsx
-
-
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './CreativeAnimation.module.css';
 import TagCanvas from 'tag-canvas';
 import Logo from "../../assets/1.png"
@@ -100,8 +107,21 @@ import Lo from "../../assets/22.png"
 import Logo2 from "../../assets/2.png"
 
 const CreativeAnimation = () => {
+  const [animationSpeed, setAnimationSpeed] = useState(0.02); // initial speed
+  const tagCanvasRef = useRef(null); // Ref for the canvas
+  const canvasInitialized = useRef(false); // Track if canvas is initialized
+
   useEffect(() => {
-    startAnimation();
+    // Initialize the animation only once
+    if (!canvasInitialized.current) {
+      startAnimation();
+      canvasInitialized.current = true;
+    }
+
+    // Add scroll listener
+    window.addEventListener('wheel', handleScroll);
+
+    return () => window.removeEventListener('wheel', handleScroll); // Cleanup on unmount
   }, []);
 
   const startAnimation = () => {
@@ -109,7 +129,7 @@ const CreativeAnimation = () => {
       fadeIn: 500,
       textColour: '#000',
       textHeight: 25,
-      maxSpeed: 0.02,
+      maxSpeed: animationSpeed,
       minBrightness: 0.2,
       depth: 0.5,
       pulsateTo: 0.6,
@@ -131,8 +151,24 @@ const CreativeAnimation = () => {
   };
 
   const handleClick = (e) => {
-    e.preventDefault();  // Prevent the default anchor behavior (no page reload)
-    // You can add additional logic here if needed
+    e.preventDefault();
+    // Add additional logic here if needed
+  };
+
+  const handleScroll = (e) => {
+    // Check the scroll direction and adjust animation speed accordingly
+    if (e.deltaY > 0) {
+      // Scroll down, slow down the animation
+      setAnimationSpeed((prevSpeed) => Math.max(prevSpeed - 0.005, 0.01));
+    } else {
+      // Scroll up, speed up the animation
+      setAnimationSpeed((prevSpeed) => Math.min(prevSpeed + 0.005, 0.05));
+    }
+
+    // Update the animation without restarting the canvas
+    if (tagCanvasRef.current) {
+      tagCanvasRef.current.maxSpeed = animationSpeed;
+    }
   };
 
   const tags = [
@@ -144,16 +180,6 @@ const CreativeAnimation = () => {
     { name: "Bankruptcy", weight: 23 , imageSrc: Logo},
     { name: "Copyright", weight: 20 , imageSrc: Logo},
     { name: "Trademark", weight: 13 , imageSrc: Logo2},
-    // { name: "Patent", weight: 43 , imageSrc: Logo},
-    // { name: "Tort", weight: 20 , imageSrc: Logo},
-    // { name: "Antitrust", weight: 23 , imageSrc: Logo},
-    // { name: "Bankruptcy", weight: 23 , imageSrc: Logo2},
-    // { name: "Copyright", weight: 20 , imageSrc: Logo},
-    // { name: "Trademark", weight: 13 , imageSrc: Lo},
-    // { name: "Patent", weight: 43 , imageSrc: Logo2},
-    // { name: "Tort", weight: 20 , imageSrc: Logo},
-    // { name: "Antitrust", weight: 23 , imageSrc: Logo},
-    // { name: "Bankruptcy", weight: 23 , imageSrc: Logo}
   ];
 
   return (
@@ -161,6 +187,7 @@ const CreativeAnimation = () => {
       <div >
         <canvas
           id="resCanvas"
+          ref={tagCanvasRef}
           width="3500"
           height="600"
           className={styles.fadeIn}
@@ -173,14 +200,12 @@ const CreativeAnimation = () => {
             <a 
               href="#!" 
               data-weight={tag.weight}
-              onClick={handleClick} // Add the click handler
+              onClick={handleClick} 
             >
-                <img 
+              <img 
                 src={tag.imageSrc} 
-                // alt={tag.name} 
-                style={{ width: "5px", height: "5px", marginRight: "10px" }} // Optional styling
+                style={{ width: "5px", height: "5px", marginRight: "10px" }} 
               />
-              {/* {tag.name} */}
             </a>
           </li>
         ))}

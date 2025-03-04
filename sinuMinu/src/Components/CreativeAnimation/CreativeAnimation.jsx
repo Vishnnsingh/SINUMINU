@@ -189,7 +189,7 @@ const CreativeAnimation = () => {
           id="resCanvas"
           ref={tagCanvasRef}
           width="3500"
-          height="600"
+          height="700"
           className={styles.fadeIn}
         ></canvas>
       </div>

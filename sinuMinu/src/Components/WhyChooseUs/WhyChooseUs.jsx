@@ -1,5 +1,6 @@
 import React from "react";
 import Styles from "./WhyChooseUs.module.css";
+
 const WhyChooseUs = () => {
   return (
     <>
@@ -12,7 +13,7 @@ const WhyChooseUs = () => {
                   <div className="py-3 relative sm:py-4">
                     <img
                       id={Styles.imgh}
-                      src="https://i.ibb.co/gFb3ns6/image-1.jpg"
+                      src="https://unsplash.com/photos/two-minions-character-figure-on-red-table-tloFnD-7EpI"
                       alt=""
                       className="w-full rounded-2xl"
                     />
@@ -20,7 +21,7 @@ const WhyChooseUs = () => {
                   <div className="py-3  relative sm:py-4">
                     <img
                       id={Styles.imgh}
-                      src="https://i.ibb.co/rfHFq15/image-2.jpg"
+                      src="https://unsplash.com/photos/yellow-and-brown-duck-cartoon-character-t0Bv0OBQuTg"
                       alt=""
                       className="w-full rounded-2xl"
                     />
@@ -31,7 +32,7 @@ const WhyChooseUs = () => {
                   <div className="relative z-10 my-4">
                     <img
                       id={Styles.imgh}
-                      src="https://i.ibb.co/9y7nYCD/image-3.jpg"
+                      src="https://unsplash.com/photos/an-orange-cartoon-character-with-two-eyes-and-a-backpack-0rxLLHD1XxA"
                       alt=""
                       className="w-full rounded-2xl"
                     />
